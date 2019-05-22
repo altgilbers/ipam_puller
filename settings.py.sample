@@ -1,0 +1,7 @@
+settings={
+    'ipam_username': 'username',
+    'ipam_password': 'p@$$w0RD',
+    'ipam_host': 'ipam.example.net',
+        # manually harvested from ipam
+    'root_zone_id': "1234567890",
+}
