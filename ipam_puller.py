@@ -68,7 +68,6 @@ driver.get("https://"+ipam_host+"/app?"+urllib.parse.urlencode(params))
 
 # this is kinda gross, but it worked..
 subzones=driver.find_elements_by_xpath('//table[@id="outerTable"]/tbody/tr[*]//table//tr/td[2]/a')
-driver.quit()  # don't need this anymore
 
 
 # export root zone
@@ -88,3 +87,4 @@ for zone in subzones:
 
     with open("./zones/"+zone.text+".csv", "wb") as f:
         f.write(resp.content)
+driver.quit()  # don't need this anymore
